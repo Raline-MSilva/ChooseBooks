@@ -97,11 +97,8 @@
 		8BFBFF5029E0C766002118E1 /* ChooseBooks */ = {
 			isa = PBXGroup;
 			children = (
-				8BFBFF5129E0C766002118E1 /* AppDelegate.swift */,
-				8BFBFF5329E0C766002118E1 /* SceneDelegate.swift */,
-				8BFBFF5529E0C766002118E1 /* ViewController.swift */,
-				8BFBFF5A29E0C76D002118E1 /* Assets.xcassets */,
-				8BFBFF5C29E0C76D002118E1 /* LaunchScreen.storyboard */,
+				8BFBFF8229E0CA6C002118E1 /* Scenes */,
+				8BFBFF8129E0CA3E002118E1 /*  SupportFiles */,
 				8BFBFF5F29E0C76D002118E1 /* Info.plist */,
 			);
 			path = ChooseBooks;
@@ -122,6 +119,25 @@
 				8BFBFF7429E0C76D002118E1 /* ChooseBooksUITestsLaunchTests.swift */,
 			);
 			path = ChooseBooksUITests;
+			sourceTree = "<group>";
+		};
+		8BFBFF8129E0CA3E002118E1 /*  SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				8BFBFF5129E0C766002118E1 /* AppDelegate.swift */,
+				8BFBFF5329E0C766002118E1 /* SceneDelegate.swift */,
+				8BFBFF5A29E0C76D002118E1 /* Assets.xcassets */,
+				8BFBFF5C29E0C76D002118E1 /* LaunchScreen.storyboard */,
+			);
+			path = " SupportFiles";
+			sourceTree = "<group>";
+		};
+		8BFBFF8229E0CA6C002118E1 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				8BFBFF5529E0C766002118E1 /* ViewController.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
