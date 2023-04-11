@@ -60,7 +60,7 @@ extension HomeScreenView: SetupViewCode {
         logoStackView.spacing = 16
         titleLogo.translatesAutoresizingMaskIntoConstraints = false
         
-        logoImage.image = UIImage(named: "")
+        logoImage.image = UIImage(named: "livros")
         logoImage.contentMode = .scaleAspectFit
         titleLogo.translatesAutoresizingMaskIntoConstraints = false
         
@@ -87,14 +87,15 @@ extension HomeScreenView: SetupViewCode {
     func setupConstraints() {
         NSLayoutConstraint.activate([
             
-            logoStackView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            logoStackView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            logoStackView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            logoStackView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             
-            buttonStackView.topAnchor.constraint(equalTo: logoStackView.bottomAnchor, constant: 50),
-            buttonStackView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 24),
-            buttonStackView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -24),
-            //buttonStackView.bottomAnchor.constraint(equalTo: registerButton.bottomAnchor, constant: 56),
-            buttonStackView.heightAnchor.constraint(equalToConstant: 48),
+            enterButton.heightAnchor.constraint(equalToConstant: 48),
+            registerButton.heightAnchor.constraint(equalToConstant: 48),
+            
+            buttonStackView.topAnchor.constraint(equalTo: logoStackView.bottomAnchor, constant: 100),
+            buttonStackView.leftAnchor.constraint(equalTo: leftAnchor, constant: 24),
+            buttonStackView.rightAnchor.constraint(equalTo: rightAnchor, constant: -24),
             
         ])
         
