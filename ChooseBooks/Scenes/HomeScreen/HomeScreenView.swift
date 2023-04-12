@@ -57,14 +57,15 @@ extension HomeScreenView: SetupViewCode {
     func setupConfigure() {
         logoStackView.axis = .vertical
         logoStackView.distribution = .fillProportionally
-        logoStackView.spacing = 16
-        titleLogo.translatesAutoresizingMaskIntoConstraints = false
+        logoStackView.spacing = 15
+        logoStackView.translatesAutoresizingMaskIntoConstraints = false
         
         logoImage.image = UIImage(named: "livros")
         logoImage.contentMode = .scaleAspectFit
-        titleLogo.translatesAutoresizingMaskIntoConstraints = false
+        logoImage.translatesAutoresizingMaskIntoConstraints = false
         
         titleLogo.text = "ChooseBooks"
+        titleLogo.font = UIFont(name: "Avenir", size: 20)
         titleLogo.textAlignment = .center
         titleLogo.translatesAutoresizingMaskIntoConstraints = false
         
@@ -93,10 +94,9 @@ extension HomeScreenView: SetupViewCode {
             enterButton.heightAnchor.constraint(equalToConstant: 48),
             registerButton.heightAnchor.constraint(equalToConstant: 48),
             
-            buttonStackView.topAnchor.constraint(equalTo: logoStackView.bottomAnchor, constant: 100),
             buttonStackView.leftAnchor.constraint(equalTo: leftAnchor, constant: 24),
             buttonStackView.rightAnchor.constraint(equalTo: rightAnchor, constant: -24),
-            
+            buttonStackView.bottomAnchor.constraint(equalTo: bottomAnchor,constant: -56)
         ])
         
     }
