@@ -75,12 +75,12 @@ extension HomeScreenView: SetupViewCode {
         buttonStackView.translatesAutoresizingMaskIntoConstraints = false
         
         enterButton.setTitle("Entrar", for: .normal)
-        enterButton.backgroundColor = .systemBlue
+        enterButton.backgroundColor = UIColor(red: 88/255, green: 110/255, blue: 138/255, alpha: 85.0)
         enterButton.layer.cornerRadius = 10
         enterButton.translatesAutoresizingMaskIntoConstraints = false
         
         registerButton.setTitle("Cadastrar", for: .normal)
-        registerButton.backgroundColor = .systemBlue
+        registerButton.backgroundColor = UIColor(red: 173/255, green: 183/255, blue: 197/255, alpha: 85.0)
         registerButton.layer.cornerRadius = 10
         registerButton.translatesAutoresizingMaskIntoConstraints = false
     }
