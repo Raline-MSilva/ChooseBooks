@@ -32,6 +32,9 @@ final class HomeScreenView: UIView {
         return UIButton()
     }()
     
+    private var isRotated = false
+    private var originalCenter: CGPoint!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .white
@@ -41,6 +44,18 @@ final class HomeScreenView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    @objc
+    internal func didTappedButtonLogin() {
+        enterButton.animateButton()
+    }
+    
+    @objc
+    internal func didTappedButtonRegister() {
+        registerButton.rotationAnimation()
+
+    }
+
 }
 
 extension HomeScreenView: SetupViewCode {
@@ -78,11 +93,13 @@ extension HomeScreenView: SetupViewCode {
         enterButton.backgroundColor = UIColor(red: 88/255, green: 110/255, blue: 138/255, alpha: 85.0)
         enterButton.layer.cornerRadius = 10
         enterButton.translatesAutoresizingMaskIntoConstraints = false
+        enterButton.addTarget(self, action: #selector(didTappedButtonLogin), for: .touchUpInside)
         
         registerButton.setTitle("Cadastrar", for: .normal)
         registerButton.backgroundColor = UIColor(red: 173/255, green: 183/255, blue: 197/255, alpha: 85.0)
         registerButton.layer.cornerRadius = 10
         registerButton.translatesAutoresizingMaskIntoConstraints = false
+        registerButton.addTarget(self, action: #selector(didTappedButtonRegister), for: .touchUpInside)
     }
     
     func setupConstraints() {
